@@ -2,7 +2,6 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
     class EPSpeedProvider extends SpeedProvider {
         get colors() {
             return [
-                // Some colors duplicated. I wanted to get this uploaded and rushed these out
                 {id: "base", default: 0xB45205, name: "Base"},
                 {id: "full", default: 0x79F12F, name: "Full"},
             ]
@@ -74,12 +73,33 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
                 ]
                 return ranges
             }
+			if ( token.actor.hasCondition("Dazed") ){
+                nBase
+                return ranges;
+            }
+			
 			//conditions with no movement
-            if (token.actor.hasCondition("restrained")) {
+            if (token.actor.hasCondition("grappled")) {
                 ranges = []
                 return ranges
             }
+			if ( token.actor.hasCondition("immobilized") ){
+                ranges = [];
+                return ranges;
+            }
             if ( token.actor.hasCondition("dead") ){
+                ranges = [];
+                return ranges;
+            }
+			if ( token.actor.hasCondition("unconcious") ){
+                ranges = [];
+                return ranges;
+            }
+			if ( token.actor.hasCondition("prone") ){
+                ranges = [];
+                return ranges;
+            }
+			if ( token.actor.hasCondition("incapacitated") ){
                 ranges = [];
                 return ranges;
             }
