@@ -1,5 +1,6 @@
 {
   "id": "ep-dragruler",
+  "name": "EP Speed Provider"
   "title": "Eclipse Phase 2e Drag Ruler Integration",
   "description": "A Drag Ruler speed provider for the Eclipse Phase 2e game system.",
   "languages": [
@@ -14,23 +15,23 @@
       "name": "VacantFanatic"
     }
   ],
+  "system": "eclipsephase",
+  "url": "https://github.com/VacantFanatic/ep-dragruler",
+  "bugs": "https://github.com/VacantFanatic/ep-dragruler/issues",
+
+  "allowBugReporter": true,
   "version": "0.1",
   "compatibility": {
     "minimum": "10",
     "verified": "11"
   },
-  "system": "eclipsephase",
-  "url": "https://github.com/VacantFanatic/ep-dragruler",
-  "manifest": "https://raw.githubusercontent.com/VacantFanatic/ep-dragruler/master/module.json",
-  "download": "https://github.com/VacantFanatic/ep-dragruler/releases/download/latest/wng-dragruler.zip",
-  "allowBugReporter": true,
   "dependencies": [
     {
       "name": "drag-ruler",
       "manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-drag-ruler/master/module.json"
     },
   ],
-  "esmodules": [
-    "modules/ep-dragruler.js"
-  ]	
+  "esmodules": ["modules/ep-dragruler.js"]	
+  "manifest": "https://raw.githubusercontent.com/VacantFanatic/ep-dragruler/master/module.json",
+  "download": "https://github.com/VacantFanatic/ep-dragruler/releases/download/latest/wng-dragruler.zip"
 }
