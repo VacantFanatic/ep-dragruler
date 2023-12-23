@@ -20,7 +20,7 @@
     "verified": "11"
   },
   "system": "eclipsephase",
-  "manifest": "https://github.com/VacantFanatic/ep-dragruler/blob/master/module.json",
+  "manifest": "https://raw.githubusercontent.com/VacantFanatic/ep-dragruler/master/module.json",
   "download": "https://github.com/VacantFanatic/ep-dragruler/releases/download/latest/wng-dragruler.zip"
   "allowBugReporter": true,
   "dependencies": [
