@@ -1,7 +1,7 @@
 {
-  "id": "wng-dragruler",
-  "title": "Wrath and Glory Drag Ruler Integration",
-  "description": "A Drag Ruler speed provider for the Wrath and Glory game system.",
+  "id": "ep-dragruler",
+  "title": "Eclipse Phase 2e Drag Ruler Integration",
+  "description": "A Drag Ruler speed provider for the Eclipse Phase 2e game system.",
   "languages": [
     {
       "lang": "en",
@@ -11,35 +11,15 @@
   ],
   "authors": [
     {
-      "name": "Jeffry Hysong",
-      "email": "foundry@maelstrom.dev",
-      "url": "https://projects.maelstrom.dev/foundry",
-      "discord": "Malvok#1288",
-      "maelstrom-discord": "https://discord.gg/ubDtKjzMvX"
-    },
-    {
-      "name": "Manuel Vögele",
-      "email": "develop@manuel-voegele.de",
-      "discord": "Stäbchenfisch#5107"
-    },
-    {
-      "name": "IronMonk",
-      "discord": "ironmonk88#4075",
-      "patreon": "https://www.patreon.com/ironmonk"
+      "name": "VacantFanatic"
     }
   ],
-  "version": "3.0.0",
+  "version": "0.1",
   "compatibility": {
     "minimum": "10",
-    "verified": "10.291"
+    "verified": "11"
   },
-  "system": "wrath-and-glory",
-  "url": "https://github.com/Maelstrom-Development/wng-dragruler",
-  "manifest": "https://raw.githubusercontent.com/Maelstrom-Development/wng-dragruler/v3.0.0/module.json",
-  "download": "https://github.com/Maelstrom-Development/wng-dragruler/releases/download/v3.0.0/wng-dragruler-v3.0.0.zip",
-  "license": "https://raw.githubusercontent.com/Maelstrom-Development/wng-dragruler/v3.0.0/LICENSE",
-  "readme": "https://raw.githubusercontent.com/Maelstrom-Development/wng-dragruler/v3.0.0/README.md",
-  "bugs": "https://github.com/Maelstrom-Development/wng-dragruler/issues",
+  "system": "eclipsephase",
   "allowBugReporter": true,
   "dependencies": [
     {
@@ -56,6 +36,6 @@
     }
   ],
   "esmodules": [
-    "modules/wng-dragruler.js"
+    "modules/ep-dragruler.js"
   ]
 }
