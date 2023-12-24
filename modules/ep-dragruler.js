@@ -8,12 +8,10 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
         }
 
         getRanges(token) {
-            let base = 4
-            let slow_full = 12
-			let normal_full = 20
-			let fast_base = 8
-			let fast_full = 32
-			let vfast_full = 40
+            let base = actor.system.additionalSystems.movementBase
+			if (base == 4) {let full = 20}
+			if (base == 8){let full = 32}
+			else {let full = base * 4}
 
             //console.log("Loading terrain type...")
 
@@ -22,19 +20,12 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
 
             //console.log("Terrain type is", terrainName)
 
-            let sBase = {range: base, color: "base"}
-            let sFull = {range: slow_full, color: "full"}
-			let nBase = {range: base, color: "base"}
-            let nFull = {range: normal_full, color: "full"}
-			let fBase = {range: fast_base, color: "base"}
-            let fFull = {range: fast_full, color: "full"}
-			let vfBase = {range: fast_base, color: "base"}
-            let vfFull = {range: vfast_full, color: "full"}
+            let Base = {range: base, color: "base"}
+            let Full = {range: full, color: "full"}
 			
-
-            let ranges = [
-                nBase,
-				nFull
+			let ranges = [
+                Base,
+				Full
             ]
             // If a token is "Dying", use the combat tracker to "Mark Defeated"
             //if (token?.overlayEffect === "icons/svg/skull.svg") {
@@ -42,34 +33,6 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
                 ranges = [
                     sBase,
 					sFull
-                ]
-                return ranges
-            }
-            if (token.actor.hasCondition("walker")) {
-                ranges = [
-                    nBase,
-                    nFull
-                ]
-                return ranges
-            }
-            if (token.actor.hasCondition("hopper")) {
-                ranges = [
-                    sBase,
-                    sFull
-                ]
-                return ranges
-            }
-			if (token.actor.hasCondition("wheeled")) {
-                ranges = [
-                    vfBase,
-                    vfFull
-                ]
-                return ranges
-            }
-			if (token.actor.hasCondition("snake")) {
-                ranges = [
-                    sBase,
-                    sFull
                 ]
                 return ranges
             }
