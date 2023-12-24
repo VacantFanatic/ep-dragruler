@@ -30,27 +30,27 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
             //if (token?.overlayEffect === "icons/svg/skull.svg") {
            
 			//conditions with no movement
-            if (token.actor.hasCondition("grappled")) {
+            if (token.actor.hasStatusEffect("grappled")) {
                 ranges = [];
                 return ranges;
             }
-			if ( token.actor.hasCondition("immobilized") ){
+			if ( token.actor.hasStatusEffect("immobilized") ){
                 ranges = [];
                 return ranges;
             }
-            if ( token.actor.hasCondition("dead") ){
+            if ( token.actor.hasStatusEffect("dead") ){
                 ranges = [];
                 return ranges;
             }
-			if ( token.actor.hasCondition("unconcious") ){
+			if ( token.actor.hasStatusEffect("unconcious") ){
                 ranges = [];
                 return ranges;
             }
-			if ( token.actor.hasCondition("prone") ){
+			if ( token.actor.hasStatusEffect("prone") ){
                 ranges = [];
                 return ranges;
             }
-			if ( token.actor.hasCondition("incapacitated") ){
+			if ( token.actor.hasStatusEffect("incapacitated") ){
                 ranges = [];
                 return ranges;
             }
