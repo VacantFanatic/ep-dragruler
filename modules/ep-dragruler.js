@@ -9,7 +9,7 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
 
         getRanges(token) {
             let base = 4
-			let full = 20
+	    let full = 20
 
             //console.log("Loading terrain type...")
 
