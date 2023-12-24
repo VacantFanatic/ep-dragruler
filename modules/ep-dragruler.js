@@ -29,15 +29,10 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
             // If a token is "Dying", use the combat tracker to "Mark Defeated"
             //if (token?.overlayEffect === "icons/svg/skull.svg") {
            
-			if ( token.actor.hasCondition("Dazed") ){
-                nBase
-                return ranges;
-            }
-			
 			//conditions with no movement
             if (token.actor.hasCondition("grappled")) {
-                ranges = []
-                return ranges
+                ranges = [];
+                return ranges;
             }
 			if ( token.actor.hasCondition("immobilized") ){
                 ranges = [];
