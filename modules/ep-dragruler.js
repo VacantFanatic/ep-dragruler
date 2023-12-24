@@ -11,6 +11,8 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
 
             let base = token.actor.system.additionalSystems.movementBase
             let full = 20
+            let hBase = base / 2
+            let hFull = full / 2
 
             //console.log("Loading terrain type...")
 
@@ -19,38 +21,52 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
 
             //console.log("Terrain type is", terrainName)
 
-            let Base = {range: base, color: "base"}
-            let Full = {range: full, color: "full"}
-			
+            let Base = { range: base, color: "base" }
+            let Full = { range: full, color: "full" }
+            let half_Base = { range: hBase, color: "base" }
+            let half_Full = { range: hFull, color: "full" }
+
 			let ranges = [
                 Base,
 				Full
             ]
             // If a token is "Dying", use the combat tracker to "Mark Defeated"
             //if (token?.overlayEffect === "icons/svg/skull.svg") {
-           
-			//conditions with no movement
-            if (token.actor.statuses.has("grappled")) {
+            if (token.actor.statuses.has("stunned")) {
+                ranges = [
+                    half_Base,
+                    half_Full
+                ];
+                return ranges;
+            }
+            if (token.actor.statuses.has("blind")) {
+                ranges = [
+                    Base
+                ];
+                return ranges;
+            }
+            //conditions with no movement
+            if (token.actor.statuses.has("restrained")) {
                 ranges = [];
                 return ranges;
             }
-			if ( token.actor.statuses.has("immobilized") ){
+            if (token.actor.statuses.has("paralyzed")) {
                 ranges = [];
                 return ranges;
             }
-            if ( token.actor.statuses.has("dead") ){
+            if (token.actor.statuses.has("dead")) {
                 ranges = [];
                 return ranges;
             }
-            if (token.actor.statuses.has("unconscious") ){
+            if (token.actor.statuses.has("unconscious")) {
                 ranges = [];
                 return ranges;
             }
-			if ( token.actor.statuses.has("prone") ){
+            if (token.actor.statuses.has("prone")) {
                 ranges = [];
                 return ranges;
             }
-			if ( token.actor.statuses.has("incapacitated") ){
+            if (token.actor.statuses.has("incapacitated")) {
                 ranges = [];
                 return ranges;
             }
