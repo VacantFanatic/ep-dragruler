@@ -20,7 +20,6 @@
   "bugs": "https://github.com/VacantFanatic/ep-dragruler/issues",
   "manifest": "https://raw.githubusercontent.com/VacantFanatic/ep-dragruler/master/module.json",
   "download": "https://github.com/VacantFanatic/ep-dragruler/releases/download/latest/wng-dragruler.zip",
-
   "allowBugReporter": true,
   "version": "0.1",
   "compatibility": {
@@ -31,8 +30,7 @@
     {
       "name": "drag-ruler",
       "manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-drag-ruler/master/module.json"
-    },
+    }
   ],
-  "esmodules": ["modules/ep-dragruler.js"]
-  
+  "esmodules": ["modules/ep-dragruler.js"] 
 }
