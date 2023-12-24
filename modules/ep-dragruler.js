@@ -2,16 +2,14 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
     class EPSpeedProvider extends SpeedProvider {
         get colors() {
             return [
-                {id: "base", default: 0xB45205, name: "Base"},
-                {id: "full", default: 0x79F12F, name: "Full"},
+                {id: "base", default: 0xe6c42e, name: "Base"},
+                {id: "full", default: 0x3ae62e, name: "Full"},
             ]
         }
 
         getRanges(token) {
-            let base = actor.system.additionalSystems.movementBase
-			if (base == 4) {let full = 20}
-			if (base == 8){let full = 32}
-			else {let full = base * 4}
+            let base = 4
+			let full = 20
 
             //console.log("Loading terrain type...")
 
@@ -69,6 +67,5 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
             return ranges
         }
     }
-
     dragRuler.registerModule("ep-dragruler", EPSpeedProvider)
 })
