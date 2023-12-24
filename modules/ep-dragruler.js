@@ -10,10 +10,8 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
         getRanges(token) {
             //let base = 4
 
-			let base = token.actor.bodies.morph1.movement1.full
-			//let full = 20
-			let full = token.actor.bodies.morph1.movement1.full
-
+            let base = token.actor.system.additionalSystems.movementBase
+			      let full = 20
 
             //console.log("Loading terrain type...")
 
