@@ -8,10 +8,9 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
         }
 
         getRanges(token) {
-            //let base = 4
 
             let base = token.actor.system.additionalSystems.movementBase
-			      let full = 20
+            let full = 20
 
             //console.log("Loading terrain type...")
 
@@ -29,13 +28,7 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
             ]
             // If a token is "Dying", use the combat tracker to "Mark Defeated"
             //if (token?.overlayEffect === "icons/svg/skull.svg") {
-            /*if (token.actor.hasCondition("dying")) {
-                ranges = [
-                    sBase,
-					sFull
-                ]
-                return ranges
-            }
+           
 			if ( token.actor.hasCondition("Dazed") ){
                 nBase
                 return ranges;
@@ -65,7 +58,7 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
 			if ( token.actor.hasCondition("incapacitated") ){
                 ranges = [];
                 return ranges;
-            }*/
+            }
             return ranges
         }
     }
