@@ -42,7 +42,7 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
                 ranges = [];
                 return ranges;
             }
-			if ( token.actor.statuses.has("unconcious") ){
+            if (token.actor.statuses.has("unconscious") ){
                 ranges = [];
                 return ranges;
             }
