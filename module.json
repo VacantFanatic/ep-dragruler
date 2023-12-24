@@ -2,6 +2,7 @@
   "id": "ep-dragruler",
   "name": "EP Speed Provider",
   "title": "Eclipse Phase 2e Drag Ruler Integration",
+  "background": "systems/eclipsephase/resources/img/bannerEclipsePhase.webp",
   "description": "A Drag Ruler speed provider for the Eclipse Phase 2e game system.",
   "languages": [
     {
