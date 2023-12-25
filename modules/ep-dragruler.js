@@ -4,8 +4,9 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
             return [
                 {id: "base", default: 0x3ae62e, name: "Base"},
                 {id: "full", default: 0xe6c42e, name: "Full" },
-                { id: "fly", default: 0x033154, name: "Fly" }, 
+                { id: "fly", default: 0xbaffee, name: "Fly" }, 
                 { id: "fly_full", default: 0x2cf5da, name: "FlyFull" }
+                { id: "none", default: 0xfc5623, name: "None"}
             ]
         }
 
@@ -17,6 +18,7 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
             let hFull = full / 2
             let fBase = 8 //set flight to static "fast" values
             let fFull = 32
+            let none = 0
 
             //console.log("Loading terrain type...")
 
@@ -31,6 +33,7 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
             let half_Full = { range: hFull, color: "full" }
             let flyBase = { range: fBase, color: "fly" }
             let flyFull = { range: fFull, color: "fly_full" }
+            let noMove = { range: none, color: "none" }
 
 			let ranges = [
                 Base,
@@ -61,27 +64,27 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
 
             //conditions with no movement
             if (token.actor.statuses.has("restrain")) {
-                ranges = [];
+                ranges = [noMove];
                 return ranges;
             }
             if (token.actor.statuses.has("paralysis")) {
-                ranges = [];
+                ranges = [noMove];
                 return ranges;
             }
             if (token.actor.statuses.has("dead")) {
-                ranges = [];
+                ranges = [noMove];
                 return ranges;
             }
             if (token.actor.statuses.has("unconscious")) {
-                ranges = [];
+                ranges = [noMove];
                 return ranges;
             }
             if (token.actor.statuses.has("prone")) {
-                ranges = [];
+                ranges = [noMove];
                 return ranges;
             }
             if (token.actor.statuses.has("incapacitated")) {
-                ranges = [];
+                ranges = [noMove];
                 return ranges;
             }
             return ranges
