@@ -4,8 +4,8 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
             return [
                 {id: "base", default: 0x3ae62e, name: "Base"},
                 {id: "full", default: 0xe6c42e, name: "Full" },
-                { id: "fly", default: 0x033154, name: "Fly" },
-                {id: "fly_full", default: 0x2e9de6, name: "FlyFull" }
+                { id: "fly", default: 0x033154, name: "Fly" }, 
+                { id: "fly_full", default: 0x2cf5da, name: "FlyFull" }
             ]
         }
 
@@ -15,7 +15,7 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
             let full = 20
             let hBase = base / 2
             let hFull = full / 2
-            let fBase = 8
+            let fBase = 8 //set flight to static "fast" values
             let fFull = 32
 
             //console.log("Loading terrain type...")
@@ -36,8 +36,7 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
                 Base,
 				Full
             ]
-            // If a token is "Dying", use the combat tracker to "Mark Defeated"
-            //if (token?.overlayEffect === "icons/svg/skull.svg") {
+
             if (token.actor.statuses.has("stun")) {
                 ranges = [
                     half_Base,
