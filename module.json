@@ -22,7 +22,7 @@
   "manifest": "https://raw.githubusercontent.com/VacantFanatic/ep-dragruler/master/module.json",
   "download": "https://github.com/VacantFanatic/ep-dragruler/releases/download/latest/ep-dragruler.zip",
   "allowBugReporter": true,
-  "version": "0.3.11",
+  "version": "0.3.12",
   "compatibility": {
     "minimum": "11",
     "verified": "11"
@@ -40,7 +40,7 @@
     ],
     "requires": [
       {
-        "id": "drag_ruler",
+        "id": "drag-ruler",
         "manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-drag-ruler/master/module.json",
         "type": "module",
         "compatibility": {
