@@ -5,8 +5,8 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
                 {id: "base", default: 0x3ae62e, name: "Base"},
                 {id: "full", default: 0xe6c42e, name: "Full" },
                 { id: "fly", default: 0xbaffee, name: "Fly" }, 
-                { id: "fly_full", default: 0x2cf5da, name: "FlyFull" }
-                { id: "none", default: 0xfc5623, name: "None"}
+                { id: "fly_full", default: 0x2cf5da, name: "FlyFull" },
+                { id: "none", default: 0xfc5623, name: "None" }
             ]
         }
 
