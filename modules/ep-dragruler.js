@@ -32,7 +32,7 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
             ]
             // If a token is "Dying", use the combat tracker to "Mark Defeated"
             //if (token?.overlayEffect === "icons/svg/skull.svg") {
-            if (token.actor.statuses.has("stunned")) {
+            if (token.actor.statuses.has("stun")) {
                 ranges = [
                     half_Base,
                     half_Full
@@ -46,11 +46,11 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
                 return ranges;
             }
             //conditions with no movement
-            if (token.actor.statuses.has("restrained")) {
+            if (token.actor.statuses.has("restrain")) {
                 ranges = [];
                 return ranges;
             }
-            if (token.actor.statuses.has("paralyzed")) {
+            if (token.actor.statuses.has("paralysis")) {
                 ranges = [];
                 return ranges;
             }
