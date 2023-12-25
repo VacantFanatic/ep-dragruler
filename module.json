@@ -22,16 +22,30 @@
   "manifest": "https://raw.githubusercontent.com/VacantFanatic/ep-dragruler/master/module.json",
   "download": "https://github.com/VacantFanatic/ep-dragruler/releases/download/latest/ep-dragruler.zip",
   "allowBugReporter": true,
-  "version": "0.3.9",
+  "version": "0.3.10",
   "compatibility": {
-    "minimum": "10",
+    "minimum": "11",
     "verified": "11"
   },
-  "dependencies": [
-    {
-      "name": "drag-ruler",
-      "manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-drag-ruler/master/module.json"
-    }
-  ],
-  "esmodules": ["modules/ep-dragruler.js"] 
+  "relationships": {
+    "systems": [
+      {
+        "id": "eclipsephase",
+        "type": "system",
+        "manifest": "https://github.com/DerDiemen/eclipsephase2e-foundryVTT/raw/master/system.json",
+        "compatibility": {
+          "verified": "1.0"
+        }
+      }
+    ],
+    "requires": [
+      {
+        "id": "drag_ruler",
+        "manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-drag-ruler/master/module.json",
+        "type": "module"
+      }
+    ]
+  },
+  "library": true,
+  "esmodules": [ "modules/ep-dragruler.js" ]
 }
