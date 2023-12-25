@@ -8,3 +8,4 @@
 - Implemented basic and full movement with dynamic values
 - Implmented conditions that affect movement
 - Implemented flight
+- Added color for No Movement 
