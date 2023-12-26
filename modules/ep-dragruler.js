@@ -2,11 +2,11 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
     class EPSpeedProvider extends SpeedProvider {
         get colors() {
             return [
-                {id: "base", default: 0x3ae62e, name: "Base"},
-                {id: "full", default: 0xe6c42e, name: "Full" },
-                { id: "fly", default: 0xbaffee, name: "Fly" }, 
-                { id: "fly_full", default: 0x2cf5da, name: "FlyFull" },
-                { id: "none", default: 0xfc5623, name: "None" }
+                {id: "base", default: 0x3ae62e, name: "Base Movement"},
+                {id: "full", default: 0xe6c42e, name: "Full Movement" },
+                { id: "fly", default: 0xbaffee, name: "Flight Base" }, 
+                { id: "fly_full", default: 0x2cf5da, name: "Flight Full" },
+                { id: "none", default: 0xfc5623, name: "No Movement Allowed" }
             ]
         }
 
